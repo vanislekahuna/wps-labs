@@ -1,0 +1,12 @@
+# Jupyter Book build output
+_build/
+.jupyter_cache/
+*jupyter_execute/
+*.doctrees
+
+# Sphinx
+.doctrees/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
