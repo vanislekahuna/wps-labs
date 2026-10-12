@@ -1,0 +1,29 @@
+# Jupyter Book build requirements for the BC Wildfire Predictive Service Tutorials Book.
+# Pin Jupyter Book below 2.0 - the book uses the 1.x / Sphinx toolchain.
+jupyter-book<2.0
+
+# Core scientific computing
+numpy
+scipy
+pandas
+matplotlib
+
+# Bayesian modeling
+pymc
+arviz
+
+# Visualization
+seaborn
+networkx
+folium
+
+# Machine learning (used in the causal-inference lab parts)
+scikit-learn
+
+# Geospatial / Earth Engine (only needed to *run* the mapping lab, not to build the book)
+earthengine-api
+geemap
+
+# HTTP / notebook helpers
+requests
+pytz

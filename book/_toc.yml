@@ -1,0 +1,48 @@
+# Table of Contents for the BC Wildfire Predictive Service Tutorials Book
+# Update this file as you add new tutorials to the repository.
+#
+# The notebooks live in sibling folders of this `book/` directory, so they are
+# exposed to the build through symlinks (see `book/ADDING_A_NOTEBOOK.md`).
+# Paths below are therefore relative to the book root, e.g.
+#   Intro_Wildfire_Mapping_Lab/BC_Wildfire_Mapping
+#   Bayesian_Wildfire_Stats_Lab/Explaining_Markov_Chain_Monte_Carlo
+
+format: jb-book
+root: intro
+options:
+  titlesonly: true
+chapters:
+  - file: Intro_Wildfire_Mapping_Lab/BC_Wildfire_Mapping
+    title: "Mapping BC Wildfires with Google Earth Engine"
+  - file: Bayesian_Wildfire_Stats_Lab/Bayesian_Simple_Linear_Regression_PyMC
+    title: "Bayesian Simple Linear Regression with PyMC"
+  - file: "Bayesian_Wildfire_Stats_Lab/[Part_1]Rethinking_Predictors_Why_Causal_Reasoning_Matters_in_Data_Science"
+    title: "Part 1 - Rethinking Predictors: Why Causal Reasoning Matters in Data Science"
+  - file: "Bayesian_Wildfire_Stats_Lab/[Part_2]Putting_DAGs_to_the_Test_What_Regression_reveals_about_Wildfire_Drivers"
+    title: "Part 2 - Putting DAGs to the Test: What Regression Reveals about Wildfire Drivers"
+  - file: Bayesian_Wildfire_Stats_Lab/Explaining_Markov_Chain_Monte_Carlo
+    title: "Explaining Markov Chain Monte Carlo"
+  - file: Bayesian_Wildfire_Stats_Lab/Reverse_Engineering_Hamiltonian_Monte_Carlo
+    title: "Reverse-Engineering Hamiltonian Monte Carlo"
+  - file: ADDING_A_NOTEBOOK
+    title: "Adding a Notebook"
+
+# ---------------------------------------------------------------------------
+# To add a new notebook:
+#   1. Drop the .ipynb file into its lab folder, e.g.
+#      Bayesian_Wildfire_Stats_Lab/My_New_Notebook.ipynb
+#      (no symlink needed - the lab folders are already linked into book/)
+#   2. Add a two-line entry below, matching the format:
+#
+#        - file: Bayesian_Wildfire_Stats_Lab/My_New_Notebook
+#          title: "My New Notebook"
+#
+#      NOTE: if the filename contains square brackets, wrap the file value in
+#      double quotes so the brackets are not parsed as a glob, e.g.
+#
+#        - file: "Bayesian_Wildfire_Stats_Lab/[Part_3]My_New_Notebook"
+#          title: "Part 3 - My New Notebook"
+#
+#   3. Commit and push to `main` - the book rebuilds and republishes
+#      automatically. See ADDING_A_NOTEBOOK.md for the full walkthrough.
+# ---------------------------------------------------------------------------

@@ -1,0 +1,122 @@
+# Jupyter Book Configuration for the BC Wildfire Predictive Service Tutorials
+# Place this file in the `book/` subfolder of the wps-labs repository.
+
+title: BC Wildfire Predictive Service | Tutorials Book
+author: BC Wildfire Predictive Service
+copyright: "2025"
+logo: https://raw.githubusercontent.com/vanislekahuna/jekyll-now/master/images/Twilight-Lycanroc-Klima.png
+
+# Execution settings
+execute:
+  execute_notebooks: off  # Render the notebooks using their saved outputs (no Earth Engine / CYBERSE auth at build time)
+  timeout: 300
+  allow_errors: false
+
+# Repository information
+repository:
+  url: https://github.com/vanislekahuna/wps-labs
+  path_to_book: book
+  branch: main
+
+# HTML theme configuration
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  home_page_in_navbar: true
+  navbar_number_sections: false
+  announcement: ""
+
+  ### New Nav Bar Styling ###
+  extra_navbar: |
+    <div style="margin: 10px 0; padding: 10px; border-top: 1px solid #e1e4e8;">
+      <a href="https://vanislekahuna.github.io" style="color: #2196F3; text-decoration: none; font-weight: 500;">
+        ← Home Page
+      </a>
+    </div>
+
+  extra_footer: ""
+  comments:
+    hypothesis: false
+    utterances: false
+
+# Launch buttons for interactive notebooks
+launch_buttons:
+  notebook_interface: "classic"
+  binderhub_url: ""
+  colab_url: "https://colab.research.google.com"
+  thebe: true
+
+# Sphinx configuration
+sphinx:
+  extra_extensions: []
+  config:
+    html_theme: sphinx_book_theme
+    html_theme_options:
+      repository_url: https://github.com/vanislekahuna/wps-labs
+      repository_branch: main
+      path_to_docs: book
+      use_repository_button: true
+      use_issues_button: true
+      use_edit_page_button: true
+      use_download_button: true
+      use_fullscreen_button: true
+      home_page_in_toc: true
+      show_navbar_depth: 2
+      show_toc_level: 2
+      navigation_with_keys: true
+      collapse_navigation: false
+      logo:
+        link: https://vanislekahuna.github.io/
+      # NOTE: `home_page_in_navbar` and `extra_navbar` are carried over from the
+      # reference book config. The pinned sphinx-book-theme version silently
+      # ignores them (it emits "unsupported theme option" warnings), so the
+      # "← Home Page" link is also surfaced in intro.md.
+      home_page_in_navbar: false
+      extra_navbar: |
+        <div style="text-align: center; margin-bottom: 15px;">
+          <a href="https://vanislekahuna.github.io" style="color: inherit; text-decoration: none;">
+            BC Wildfire Predictive Service | Tutorials Book
+          </a>
+        </div>
+        <div style="margin: 10px 0; padding: 10px; border-top: 1px solid #e1e4e8;">
+          <a href="https://vanislekahuna.github.io" style="color: #2196F3; text-decoration: none; font-weight: 500;">
+            ← Home Page
+          </a>
+        </div>
+    html_show_sourcelink: true
+    suppress_warnings:
+      - mystnb.unknown_mime_type
+      - misc.highlighting_failure
+
+# Parse and render settings
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+  myst_url_schemes: [mailto, http, https]
+
+# Exclude patterns (relative to the book root)
+exclude_patterns:
+  - _build
+  - .git
+  - .github
+  - Thumbs.db
+  - .DS_Store
+  - "**.ipynb_checkpoints"
+  - README.md
+  - "**/README.md"
+  - requirements.txt
+  - "**/requirements.txt"
+  - environment.yml
+  - data/**           # Keep the large historical wildfire data tree out of the build
+  - "**/*.env"        # e.g. cyberse_wildfire.env
+  - .pytest_cache
+  - "**.pytest_cache"
