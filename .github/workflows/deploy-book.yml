@@ -29,7 +29,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Fork-only guard: this repository is a fork of bcgov/wps-tutorials, and the
+  # same deploy-book.yml may be merged upstream. The job-level `if` skips every
+  # run unless the repo is exactly this fork, so only ONE published book exists
+  # (https://vanislekahuna.github.io/wps-labs/). In the parent repo the run is
+  # skipped (grey), never failed (red). Note: the check must live here — the
+  # `on:` trigger cannot filter by repository.
   build:
+    if: github.repository == 'vanislekahuna/wps-labs'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -65,6 +72,7 @@ jobs:
           path: './book/_build/html'
 
   deploy:
+    if: github.repository == 'vanislekahuna/wps-labs'
     needs: build
     runs-on: ubuntu-latest
     environment:
