@@ -2,7 +2,7 @@
 
 [← Home Page](https://vanislekahuna.github.io)
 
-Welcome to the **BC Wildfire Predictive Service (`wps`) Labs* — a growing
+Welcome to the **BC Wildfire Predictive Service (`wps`) Labs** — a growing
 collection of hands-on lab tutorials that bridge the gap between advanced technology
 and practical wildfire management.
 
