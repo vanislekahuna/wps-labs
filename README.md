@@ -8,3 +8,9 @@ Welcome to the British Columbia's Wildfire Predictive Service (`wps`) tutorials 
 > By increasing exposure to the challenges of wildfires amongst the wider Data Science community, we strive to empower leaders with the tools to make optimal decisions which minimize the loss that communities and wildlife suffer.
 
 Each tutorial in this repository is carefully crafted to build foundational knowledge while tackling real-world challenges, such as early fire detection, perimeter mapping, and burn severity assessment. Whether you're a data scientist looking to apply your skills to environmental challenges, or a wildfire researcher seeking to leverage machine learning, you'll find resources here to support your journey.
+
+## 🖥️ Read and Interact with the Notebooks Online
+
+Instead of interacting with the notebooks directly on GitHub, the labs are now available as an interactive, more user-friendly **[Jupyter Book](https://vanislekahuna.github.io/wps-labs/intro.html)**.
+
+There you can browse all the lab notebooks with their rendered narrative, code, and figures — and open any notebook directly in Google Colab to run the cells yourself.
