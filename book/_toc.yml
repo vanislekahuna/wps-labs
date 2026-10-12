@@ -24,8 +24,8 @@ chapters:
     title: "Explaining Markov Chain Monte Carlo"
   - file: Bayesian_Wildfire_Stats_Lab/Reverse_Engineering_Hamiltonian_Monte_Carlo
     title: "Reverse-Engineering Hamiltonian Monte Carlo"
-  - file: ADDING_A_NOTEBOOK
-    title: "Adding a Notebook"
+  # - file: ADDING_A_NOTEBOOK
+  #   title: "Adding a Notebook"
 
 # ---------------------------------------------------------------------------
 # To add a new notebook:
